@@ -4,4 +4,4 @@
     shell: "df -h"
     register: pid
 
-  - debug: var=pid.stdout
+  - debug: var=pid.stdout_lines
