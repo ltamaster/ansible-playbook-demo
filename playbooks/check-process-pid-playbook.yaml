@@ -1,0 +1,8 @@
+- hosts: {inventory}
+
+  tasks:
+  - name: Get PID
+    shell: "ps -ef | grep {{process}} | awk '{print $2}'"
+    register: pid
+
+  - debug: var=pid.stdout

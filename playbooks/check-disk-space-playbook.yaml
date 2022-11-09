@@ -1,0 +1,8 @@
+- hosts: {inventory}
+
+  tasks:
+  - name: Get Disk Space
+    shell: "df -h"
+    register: pid
+
+  - debug: var=pid.stdout
