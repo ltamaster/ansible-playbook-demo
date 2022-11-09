@@ -1,4 +1,4 @@
-- hosts: {inventory}
+- hosts: {{inventory}}
 
   tasks:
   - name: Get Disk Space
